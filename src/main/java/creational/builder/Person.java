@@ -1,7 +1,4 @@
 package creational.builder;
-
-import jdk.vm.ci.meta.Local;
-
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -72,7 +69,11 @@ public class Person {
            person.phone = phone;
        }
 
-    }
+       //6. daj obiekt
+       Person getPerson() {
+           return person;
+       }
+   }
 
 }
 
