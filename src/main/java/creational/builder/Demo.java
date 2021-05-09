@@ -15,10 +15,7 @@ public class Demo {
         builder.setPhone(345567678);
         Person person = builder.getPerson();*/
 
-
-        Person person2 =
-
-        Person person = new Person.PersonBuilder("Anna Markowska","a.markowska2" +
+        Person person = Person.builder("Anna Markowska","a.markowska2" +
                 "2", "Wojska Polskiego 2")
                 .bornIn(LocalDate.now().minusYears(20))
                 .withPhone(334545656)

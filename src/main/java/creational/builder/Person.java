@@ -54,13 +54,13 @@ public class Person {
     //2. klasa statyczna wewnetrzna
     // wewnętrzna żeby miała dostęp do konstruktora person
     // statyczna żeby była niezależna od obiektu klasy zewnętrznej
-   static class PersonBuilder{
+  static class PersonBuilder{
 
         //3. tworzę obiekt budowany
        private Person person = new Person();
 
        //4. uzupełniam obowiązkowe dane
-       public PersonBuilder(String fullName, String mail, String address){
+       private PersonBuilder(String fullName, String mail, String address){
            person.fullName = fullName;
            person.mail = mail;
            person.address = address;
