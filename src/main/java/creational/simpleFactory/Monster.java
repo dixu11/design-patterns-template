@@ -1,4 +1,7 @@
 package creational.simpleFactory;
 
-class Monster {
+abstract class Monster {
+
+    public abstract void show();
+
 }
