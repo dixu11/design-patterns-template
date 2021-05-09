@@ -2,7 +2,8 @@ package structural.decorator;
 
 public class DecoratorDemo {
     public static void main(String[] args) {
-        //https://www.journaldev.com/1540/decorator-design-pattern-in-java-example przykład implementacji wzorca
+        //https://www.journaldev.com/1540/decorator-design-pattern-in-java-example
+        // przykład implementacji wzorca
 
         /*Zaimplementuj wzorzec dekorator aby rozszerzyć zachowania obiektu podstawowego drzewka*/
 
@@ -11,6 +12,7 @@ public class DecoratorDemo {
         System.out.println(simpleTree.getDecoratedTree());
 
         /*Twój kod przygotowujący drzewko świąteczne udekorowane światełkami*/
+
         //System.out.println(treeWithLights.getDecoratedTree());
         // -> ma drukować "świąteczne drzewko ze światełkami
 
