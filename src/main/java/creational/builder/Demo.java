@@ -6,6 +6,7 @@ public class Demo {
                 "a.markowska22",
                 "Wojska Polskiego 2");*/
 
+        //tworzymy obiekt buildera
         Person.PersonBuilder builder = new Person.PersonBuilder();
 
         //wykonaj polecenie z ar
