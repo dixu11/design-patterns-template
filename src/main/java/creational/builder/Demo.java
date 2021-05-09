@@ -2,12 +2,16 @@ package creational.builder;
 
 public class Demo {
     public static void main(String[] args) {
-        System.out.println("Test");
-
-        Person person = new Person("Anna Markowska",
+       /* Person person = new Person("Anna Markowska",
                 "a.markowska22",
-                "Wojska Polskiego 2");
+                "Wojska Polskiego 2");*/
+
+        Person.PersonBuilder builder = new Person.PersonBuilder();
+
         //wykonaj polecenie z ar
+
+
+
 
     }
 }

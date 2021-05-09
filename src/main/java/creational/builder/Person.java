@@ -6,39 +6,15 @@ import java.util.Objects;
 public class Person {
 
     private String fullName;
-    private LocalDate birthDate;
-    private int phone;
     private String mail;
     private String address;
+    private LocalDate birthDate;
+    private int phone;
 
-    public Person(String fullName, String mail, String address) {
-        this.fullName = fullName;
-        this.mail = mail;
-        this.address = address;
+    //1. Prywatny konstruktor -> budowaniem obiektu zajmie się klasa PersonBuilder
+    private Person() {
+
     }
-
-    public Person(String fullName, LocalDate birthDate, int phone, String mail, String address) {
-        this.fullName = fullName;
-        this.birthDate = birthDate;
-        this.phone = phone;
-        this.mail = mail;
-        this.address = address;
-    }
-
-    public Person(String fullName, LocalDate birthDate, String mail, String address) {
-        this.fullName = fullName;
-        this.birthDate = birthDate;
-        this.mail = mail;
-        this.address = address;
-    }
-
-    public Person(String fullName, int phone, String mail, String address) {
-        this.fullName = fullName;
-        this.phone = phone;
-        this.mail = mail;
-        this.address = address;
-    }
-
 
     @Override
     public boolean equals(Object o) {
@@ -65,4 +41,12 @@ public class Person {
                 ", address='" + address + '\'' +
                 '}';
     }
+
+    //2.
+   static class PersonBuilder{
+
+    }
+
 }
+
+
