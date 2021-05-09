@@ -44,10 +44,16 @@ public class Person {
                 '}';
     }
 
+
+    //8. statyczne metoda budująca buildera
+    public static PersonBuilder builder(String fullName, String mail, String address){
+        return new PersonBuilder(fullName, mail, address);
+    }
+
+
     //2. klasa statyczna wewnetrzna
     // wewnętrzna żeby miała dostęp do konstruktora person
     // statyczna żeby była niezależna od obiektu klasy zewnętrznej
-
    static class PersonBuilder{
 
         //3. tworzę obiekt budowany
@@ -61,16 +67,19 @@ public class Person {
        }
 
        //5. umożliwić ustawianie opcjonalnych danych
-       public void setBirthDate(LocalDate birthDate){
+       public PersonBuilder bornIn(LocalDate birthDate){
            person.birthDate = birthDate;
+           return this;
        }
 
-       public void setPhone(int phone){
+       //7. metody przejsciowe powinny zwracać obiekt buildera - fluent interface
+       public PersonBuilder withPhone(int phone){
            person.phone = phone;
+           return this;
        }
 
        //6. daj obiekt
-       Person getPerson() {
+       Person build() {
            return person;
        }
    }
