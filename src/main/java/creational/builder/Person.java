@@ -45,7 +45,11 @@ public class Person {
     //2. klasa statyczna wewnetrzna
     // wewnętrzna żeby miała dostęp do konstruktora person
     // statyczna żeby była niezależna od obiektu klasy zewnętrznej
+
    static class PersonBuilder{
+
+        //3. tworzę obiekt budowany
+       private Person person = new Person();
 
     }
 
