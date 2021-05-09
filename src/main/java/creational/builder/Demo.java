@@ -6,8 +6,10 @@ public class Demo {
                 "a.markowska22",
                 "Wojska Polskiego 2");*/
 
-        //tworzymy obiekt buildera
-        Person.PersonBuilder builder = new Person.PersonBuilder();
+        //tworzymy obiekt buildera - dostarczając obowiązkowe dane
+        Person.PersonBuilder builder = new Person.PersonBuilder("Anna Markowska","a.markowska2" +
+                "2", "Wojska Polskiego 2");
+
 
         //wykonaj polecenie z ar
 
