@@ -4,6 +4,7 @@ import structural.adapter.american_module.CarUS;
 import structural.adapter.american_module.Tesla;
 import structural.adapter.eu_cars.Bmw;
 import structural.adapter.eu_cars.CarEU;
+import structural.adapter.eu_cars.UsToEuAdapter;
 
 public class Demo {
     public static void main(String[] args) {
@@ -14,12 +15,12 @@ public class Demo {
         żadnej z istniejących klas w w metodzie main możesz uzupełnić wyłącznie kod w miejscu opisanym "your code"
         uzupełnik nie kompilujący się fragment w podanym miejscu aby otrzymać oczekiwny
         * wynik w konsoli. Zastosuj wzorzec adapter oraz przelicznik 1 mila = 1,6 km */
-        CarUS tesla = new Tesla(1000);
-       // CarEU teslaEu = /* your code*/;
+        //
+        CarEU teslaEu =  new UsToEuAdapter(new Tesla(1000));
         CarEU bmw = new Bmw(5000);
 
         RaceSimulation raceSimulation = new RaceSimulation();
-       // raceSimulation.addCar(teslaEu);
+        raceSimulation.addCar(teslaEu);
         raceSimulation.addCar(bmw);
 
         raceSimulation.simulateRace(50);

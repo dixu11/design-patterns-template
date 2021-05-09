@@ -1,5 +1,7 @@
 package structural.adapter.american_module;
 
+import structural.adapter.eu_cars.CarEU;
+
 public class Tesla implements CarUS{
     private double mileage;
 
