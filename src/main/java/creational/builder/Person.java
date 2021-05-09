@@ -1,5 +1,7 @@
 package creational.builder;
 
+import jdk.vm.ci.meta.Local;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -54,13 +56,21 @@ public class Person {
         //3. tworzę obiekt budowany
        private Person person = new Person();
 
-       //4. uzupełniam obowiązkowe dane w konstruktorze buildera
+       //4. uzupełniam obowiązkowe dane
        public PersonBuilder(String fullName, String mail, String address){
            person.fullName = fullName;
            person.mail = mail;
            person.address = address;
        }
 
+       //5. umożliwić ustawianie opcjonalnych danych
+       public void setBirthDate(LocalDate birthDate){
+           person.birthDate = birthDate;
+       }
+
+       public void setPhone(int phone){
+           person.phone = phone;
+       }
 
     }
 
