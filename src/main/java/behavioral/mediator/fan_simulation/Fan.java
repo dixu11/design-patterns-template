@@ -2,20 +2,20 @@ package behavioral.mediator.fan_simulation;
 
 public class Fan {
 
+    private Mediator mediator;
     private boolean on;
-    private PowerSupplier supplier;
 
-    public Fan(PowerSupplier supplier) {
-        this.supplier = supplier;
+    Fan(Mediator mediator) {
+        this.mediator = mediator;
     }
 
     public void turnOn() {
-        supplier.start();
+        mediator.startSupplier();
         on = true;
     }
 
     public void turnOff() {
-        supplier.stop();
+        mediator.stopSupplier();
         on = false;
     }
 
