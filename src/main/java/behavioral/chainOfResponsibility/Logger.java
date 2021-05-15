@@ -1,44 +1,26 @@
 package behavioral.chainOfResponsibility;
 
+public abstract class Logger {
 
-public class Logger {
+    private Logger nextLogger;
+    private LogLvl loggerLevel;
 
-    private LogLvl minLogLvl;
-    private Logging errorLogging;
-    private Logging warningLogging;
-    private Logging infoLogging;
-    private Logging debugLogging;
-
-    public Logger() {
-        minLogLvl = LogLvl.DEBUG;
-        setUpLoggers();
+    Logger(Logger nextLogger, LogLvl loggerLevel) {
+        this.nextLogger = nextLogger;
+        this.loggerLevel = loggerLevel;
     }
 
-    public Logger(LogLvl minLogLvl) {
-        this.minLogLvl = minLogLvl;
-        setUpLoggers();
-    }
-
-    private void setUpLoggers() {
-        errorLogging = new ErrorLogging();
-        warningLogging = new WarningLogging();
-        infoLogging = new InfoLogging();
-        debugLogging = new DebugLogging();
-    }
-
-    public void log(String message, LogLvl lvl) {
-        if (lvl == LogLvl.ERROR) {
-            errorLogging.log(message);
-        } else if (lvl == LogLvl.WARNING &&  (minLogLvl == LogLvl.DEBUG || minLogLvl == LogLvl.INFO || minLogLvl == LogLvl.WARNING)  ) {
-            warningLogging.log(message);
-        } else if (lvl == LogLvl.INFO && (minLogLvl == LogLvl.DEBUG || minLogLvl == LogLvl.INFO) ) {
-            infoLogging.log(message);
-        } else if (lvl == LogLvl.DEBUG && (minLogLvl == LogLvl.DEBUG) ) {
-            debugLogging.log(message);
+    public void log(String message, LogLvl lvl){
+        if (lvl == loggerLevel) {
+            showLog(message);
+        } else if(nextLogger != null){ // tylko jeśli jest ktoś po mnie to przekazuje
+            nextLogger.log(message, lvl);
         }
     }
 
-    public void setMinLogLvl(LogLvl minLogLvl) {
-        this.minLogLvl = minLogLvl;
+   protected   abstract void showLog(String message);
+
+    void setNextLogger(Logger nextLogger) {
+        this.nextLogger = nextLogger;
     }
 }
