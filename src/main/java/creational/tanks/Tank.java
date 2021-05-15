@@ -13,4 +13,8 @@ abstract class Tank {
     public  void attack(){
         barrel.attack();
     }
+
+    void setBarrel(Barrel barrel) {
+        this.barrel = barrel;
+    }
 }
