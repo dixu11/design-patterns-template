@@ -8,15 +8,15 @@
         Pyłek (obiektowy);
 
     wzorce czynnościowe/operacyjne:
-        Łańcuch zobowiązań/odpowiedzialności (obiektowy),
+                    Łańcuch zobowiązań/odpowiedzialności (obiektowy),
         Polecenie (obiektowy),
-        Interpreter (klasowy),
-        Iterator (obiektowy),
+                    Interpreter (klasowy),
+                     Iterator (obiektowy),
                      Mediator (obiektowy),
                      Pamiątka/Memento (ang. Memento) (obiektowy),
         Metoda szablonowa (ang. template method) (klasowy),
                      Obserwator (obiektowy),
                     Stan (obiektowy), -> filmik
                     Strategia (obiektowy),
-        Odwiedzający/Wizytator (ang. visitor) (obiektowy),
-                       Zabór Zasobu Jest Inicjalizacją (obiektowy).
+                    Odwiedzający/Wizytator (ang. visitor) (obiektowy),
+                    Zabór Zasobu Jest Inicjalizacją (obiektowy).
