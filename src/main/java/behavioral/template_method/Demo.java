@@ -12,6 +12,11 @@ public class Demo {
      * */
 
     public static void main(String[] args) {
+//        TextConverter textConverter = new TextConverter();
+//        textConverter.runConverter();
+
+
+
         showGuiInputAndOutputExample();
     }
 
